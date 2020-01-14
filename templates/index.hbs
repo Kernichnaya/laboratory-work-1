@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Любимый фрукт</title>
+</head>
+
+<body>
+    <div class="container">
+        <form action="/" method="post" accept-charset="UTF-8" enctype="text/plain">
+            <label for="fruit">Любимый фрукт: {{favorite}}</label>
+            <select class="form-control mb-2" name="fruit" id="fruit">
+                {{#each fruits}}
+                <option value="{{this.value}}" {{selectedIf this.selected}}>{{this.title}}</option>
+                {{/each}}
+            </select>
+            <button class="btn btn btn-primary mr-1" type="submit">Отправить</button>
+            <a href="/">
+                <button class="btn btn-primary" type="button">Сбросить</button>
+            </a>
+        </form>
+    </div>
+</body>
+
+</html>
