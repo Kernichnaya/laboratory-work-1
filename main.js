@@ -81,6 +81,6 @@ const server = http.createServer(function (req, res) {
     }
 });
 
-server.listen(3000, function () {
+server.listen(process.env.PORT || 3000, function () {
     console.log('Server is start! Listen port: 3000');
 });
